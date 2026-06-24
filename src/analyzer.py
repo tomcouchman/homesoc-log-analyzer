@@ -1,8 +1,9 @@
 import re
+import sys
 from collections import defaultdict
 
 
-LOG_FILE = "data/sample_auth.log"
+DEFAULT_LOG_FILE = "data/sample_auth.log"
 REPORT_FILE = "reports/security_report.txt"
 FAILED_LOGIN_THRESHOLD = 5
 
@@ -54,7 +55,7 @@ def get_risk_level(failed_attempts):
         return "LOW"
 
 
-def generate_report(failed_login_counts):
+def generate_report(failed_login_counts, log_file):
     """
     Generate a security report and return it as text.
     """
@@ -63,6 +64,7 @@ def generate_report(failed_login_counts):
 
     report_lines.append("HomeSOC Log Analyzer Report")
     report_lines.append("===========================")
+    report_lines.append(f"Log file analyzed: {log_file}")
 
     suspicious_activity_found = False
 
@@ -94,13 +96,23 @@ def save_report(report_text, output_file):
 
 
 def main():
-    failed_login_counts = analyze_failed_logins(LOG_FILE)
-    report_text = generate_report(failed_login_counts)
+    if len(sys.argv) > 1:
+        log_file = sys.argv[1]
+    else:
+        log_file = DEFAULT_LOG_FILE
 
-    print(report_text)
+    try:
+        failed_login_counts = analyze_failed_logins(log_file)
+        report_text = generate_report(failed_login_counts, log_file)
 
-    save_report(report_text, REPORT_FILE)
-    print(f"\nReport saved to: {REPORT_FILE}")
+        print(report_text)
+
+        save_report(report_text, REPORT_FILE)
+        print(f"\nReport saved to: {REPORT_FILE}")
+
+    except FileNotFoundError:
+        print(f"Error: Could not find log file: {log_file}")
+        print("Please check the file path and try again.")
 
 
 if __name__ == "__main__":

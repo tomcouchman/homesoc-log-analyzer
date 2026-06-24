@@ -1,5 +1,6 @@
 HomeSOC Log Analyzer Report
 ===========================
+Log file analyzed: data/sample_auth.log
 
 [MEDIUM] Suspicious login activity detected
 IP Address: 192.168.1.50
