@@ -39,3 +39,22 @@ Failed login attempts: 6
 Reason: Multiple failed SSH login attempts from the same IP address.
 
 Report saved to: reports/security_report.txt
+
+
+## What I learned
+
+While building this project, I practised:
+
+- Reading and parsing log files with Python
+- Using regular expressions to extract IP addresses
+- Counting repeated security events
+- Applying simple detection logic
+- Assigning risk levels to findings
+- Generating a basic security report
+
+This helped me better understand how repeated failed login attempts can indicate possible brute-force activity.
+
+
+## Disclaimer
+
+This project uses sample log data for educational purposes. It is not intended to replace a full SIEM, EDR, or professional security monitoring tool.
