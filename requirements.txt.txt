@@ -1,0 +1,2 @@
+# No external Python packages required for version 1.
+# This project currently uses only built-in Python libraries.

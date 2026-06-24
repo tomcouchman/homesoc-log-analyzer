@@ -1,0 +1,7 @@
+HomeSOC Log Analyzer Report
+===========================
+
+[MEDIUM] Suspicious login activity detected
+IP Address: 192.168.1.50
+Failed login attempts: 6
+Reason: Multiple failed SSH login attempts from the same IP address.

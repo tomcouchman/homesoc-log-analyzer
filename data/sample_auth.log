@@ -1,0 +1,10 @@
+Jun 24 10:01:12 homeserver sshd[1234]: Failed password for invalid user admin from 192.168.1.50 port 54231 ssh2
+Jun 24 10:01:45 homeserver sshd[1235]: Failed password for invalid user admin from 192.168.1.50 port 54232 ssh2
+Jun 24 10:02:10 homeserver sshd[1236]: Failed password for invalid user admin from 192.168.1.50 port 54233 ssh2
+Jun 24 10:02:39 homeserver sshd[1237]: Failed password for invalid user admin from 192.168.1.50 port 54234 ssh2
+Jun 24 10:03:01 homeserver sshd[1238]: Failed password for invalid user admin from 192.168.1.50 port 54235 ssh2
+Jun 24 10:03:24 homeserver sshd[1239]: Failed password for invalid user admin from 192.168.1.50 port 54236 ssh2
+Jun 24 10:04:00 homeserver sshd[1240]: Accepted password for tom from 192.168.1.20 port 50122 ssh2
+Jun 24 11:15:22 homeserver sshd[1241]: Failed password for root from 10.0.0.8 port 60001 ssh2
+Jun 24 11:16:02 homeserver sshd[1242]: Failed password for root from 10.0.0.8 port 60002 ssh2
+Jun 24 12:30:55 homeserver sshd[1243]: Accepted password for elena from 192.168.1.21 port 50123 ssh2
