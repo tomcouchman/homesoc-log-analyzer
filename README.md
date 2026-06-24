@@ -10,13 +10,13 @@ The project was built to practise practical blue-team cybersecurity skills, incl
 
 ## Current features
 
-- Reads a sample SSH authentication log
-- Detects repeated failed login attempts
-- Extracts source IP addresses
-- Counts failed login attempts by IP
-- Assigns a risk level
-- Prints findings to the terminal
-- Saves a report to `reports/security_report.txt`
+* Reads a sample SSH authentication log
+* Detects repeated failed login attempts
+* Extracts source IP addresses
+* Counts failed login attempts by IP
+* Assigns a risk level
+* Prints findings to the terminal
+* Saves a report to `reports/security_report.txt`
 
 ## Detection logic
 
@@ -24,8 +24,8 @@ The tool currently flags an IP address as suspicious when it has 5 or more faile
 
 Risk levels:
 
-- 5-9 failed attempts: MEDIUM
-- 10+ failed attempts: HIGH
+* 5-9 failed attempts: MEDIUM
+* 10+ failed attempts: HIGH
 
 ## Example output
 
@@ -39,21 +39,26 @@ Failed login attempts: 6
 Reason: Multiple failed SSH login attempts from the same IP address.
 
 Report saved to: reports/security_report.txt
-
+```
 
 ## What I learned
 
 While building this project, I practised:
 
-- Reading and parsing log files with Python
-- Using regular expressions to extract IP addresses
-- Counting repeated security events
-- Applying simple detection logic
-- Assigning risk levels to findings
-- Generating a basic security report
+* Reading and parsing log files with Python
+* Using regular expressions to extract IP addresses
+* Counting repeated security events
+* Applying simple detection logic
+* Assigning risk levels to findings
+* Generating a basic security report
 
 This helped me better understand how repeated failed login attempts can indicate possible brute-force activity.
 
+## Use of AI
+
+This project was built as part of my cybersecurity learning journey. I used AI assistance to help plan the project structure, explain Python concepts, and troubleshoot errors while building the tool.
+
+All code was reviewed, tested, and understood by me before being committed.
 
 ## Disclaimer
 
